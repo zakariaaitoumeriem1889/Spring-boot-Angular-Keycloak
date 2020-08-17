@@ -1,0 +1,15 @@
+<div class="container alert-danger" *ngIf="errorMessage">
+  {{ errorMessage }}
+</div>
+<table *ngIf="suppliers" class="table table-striped">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Price</th>
+  </tr>
+  <tr *ngFor="let supplier of suppliers._embedded.suppliers">
+    <td>{{supplier.id}}</td>
+    <td>{{supplier.name}}</td>
+    <td>{{supplier.email}}</td>
+  </tr>
+</table>
